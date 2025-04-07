@@ -27,7 +27,6 @@ export default ({ config }: ConfigContext): ExpoConfig => {
       favicon: "./assets/images/favicon.png",
     },
     plugins: [
-      // "@logrocket/react-native",
       [
         "expo-build-properties",
         {
@@ -42,13 +41,13 @@ export default ({ config }: ConfigContext): ExpoConfig => {
           },
         },
       ],
-      // [
-      //   "expo-local-authentication",
-      //   {
-      //     faceIDPermission:
-      //       "Der App erlauben Face ID zu verwenden, anstelle von der appinternen Pin.",
-      //   },
-      // ],
+      [
+        "expo-local-authentication",
+        {
+          faceIDPermission:
+            "Der App erlauben Face ID zu verwenden, anstelle von der appinternen Pin.",
+        },
+      ],
       [
         "expo-splash-screen",
         {
@@ -58,15 +57,6 @@ export default ({ config }: ConfigContext): ExpoConfig => {
           backgroundColor: "#ffffff",
         },
       ],
-      // [
-      //   "@sciendis/expo-ehc-nfc",
-      //   {
-      //     nfcReaderUsageDescription:
-      //       "Diese App benötigt Zugriff auf NFC um persönliche Daten der eGK lesen zu können.",
-      //     deploymentTarget: "16.0",
-      //     languages: ["de", "en"],
-      //   },
-      // ],
     ],
     experiments: {
       typedRoutes: true,
